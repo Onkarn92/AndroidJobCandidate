@@ -1,7 +1,56 @@
 <resources>
-    <dimen name="app_bar_height">180dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
-    <dimen name="detail_backdrop_height">256dp</dimen>
-    <dimen name="card_margin">16dp</dimen>
+	<dimen name="app_bar_height">180dp</dimen>
+	<dimen name="fab_margin">16dp</dimen>
+	<dimen name="text_margin">16dp</dimen>
+	<dimen name="card_margin">16dp</dimen>
+	
+	<!--Dimensions-->
+	<dimen name="value_0">0dp</dimen>
+	<dimen name="value_0_5">0.5dp</dimen>
+	<dimen name="value_1">1dp</dimen>
+	<dimen name="value_2">2dp</dimen>
+	<dimen name="value_3">3dp</dimen>
+	<dimen name="value_4">4dp</dimen>
+	<dimen name="value_5">5dp</dimen>
+	<dimen name="value_8">8dp</dimen>
+	<dimen name="value_10">10dp</dimen>
+	<dimen name="value_12">12dp</dimen>
+	<dimen name="value_13">13dp</dimen>
+	<dimen name="value_15">15dp</dimen>
+	<dimen name="value_20">20dp</dimen>
+	<dimen name="value_24">24dp</dimen>
+	<dimen name="value_25">25dp</dimen>
+	<dimen name="value_30">30dp</dimen>
+	<dimen name="value_35">35dp</dimen>
+	<dimen name="value_40">40dp</dimen>
+	<dimen name="value_45">45dp</dimen>
+	<dimen name="value_50">50dp</dimen>
+	<dimen name="value_55">55dp</dimen>
+	<dimen name="value_60">60dp</dimen>
+	<dimen name="value_70">70dp</dimen>
+	<dimen name="value_80">80dp</dimen>
+	<dimen name="value_100">100dp</dimen>
+	<dimen name="value_120">120dp</dimen>
+	<dimen name="value_150">150dp</dimen>
+	<dimen name="value_180">180dp</dimen>
+	<dimen name="value_200">200dp</dimen>
+	<dimen name="value_220">220dp</dimen>
+	<dimen name="value_250">250dp</dimen>
+	
+	<!--Text Sizes-->
+	<dimen name="text_12">12sp</dimen>
+	<dimen name="text_13">13sp</dimen>
+	<dimen name="text_14">14sp</dimen>
+	<dimen name="text_15">15sp</dimen>
+	<dimen name="text_16">16sp</dimen>
+	<dimen name="text_18">18sp</dimen>
+	<dimen name="text_20">20sp</dimen>
+	<dimen name="text_22">22sp</dimen>
+	<dimen name="text_24">24sp</dimen>
+	<dimen name="text_26">26sp</dimen>
+	
+	<!--Custom-->
+	<dimen name="error_placeholder_width">150dp</dimen>
+	<dimen name="error_placeholder_height">95dp</dimen>
+	<dimen name="detail_backdrop_height">250dp</dimen>
 </resources>

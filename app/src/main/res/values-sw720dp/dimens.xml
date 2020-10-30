@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Custom-->
+	<dimen name="error_placeholder_width">250dp</dimen>
+	<dimen name="error_placeholder_height">160dp</dimen>
+	<dimen name="detail_backdrop_height">350dp</dimen>
+</resources>
