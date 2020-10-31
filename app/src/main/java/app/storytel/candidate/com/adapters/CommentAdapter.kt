@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.storytel.candidate.com.R
 import app.storytel.candidate.com.adapters.CommentAdapter.ViewHolder
-import app.storytel.candidate.com.databinding.PostItemBinding
+import app.storytel.candidate.com.databinding.ItemCommentBinding
 import app.storytel.candidate.com.models.Comment
 
 class CommentAdapter : RecyclerView.Adapter<ViewHolder>() {
@@ -16,7 +16,7 @@ class CommentAdapter : RecyclerView.Adapter<ViewHolder>() {
 	override fun onCreateViewHolder(
 			parent: ViewGroup,
 			viewType: Int
-	): ViewHolder = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.post_item, parent, false))
+	): ViewHolder = ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_comment, parent, false))
 	
 	override fun onBindViewHolder(
 			holder: ViewHolder,
@@ -41,12 +41,17 @@ class CommentAdapter : RecyclerView.Adapter<ViewHolder>() {
 	 */
 	class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		
-		val binding: PostItemBinding = PostItemBinding.bind(itemView)
+		private val binding: ItemCommentBinding = ItemCommentBinding.bind(itemView)
 		
 		/**
 		 * @param comment to be render on UI.
 		 */
 		fun setData(comment: Comment) {
+			with(binding) {
+				commentBodyText.text = comment.body
+				commentNameText.text = comment.name
+				commentEmailText.text = comment.email
+			}
 		}
 	}
 }

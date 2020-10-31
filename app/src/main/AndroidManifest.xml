@@ -18,9 +18,7 @@
 			android:supportsRtl="true"
 			android:theme="@style/AppTheme">
 		
-		<activity
-				android:name=".views.PostActivity"
-				android:label="@string/app_name">
+		<activity android:name=".views.PostActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				
@@ -28,8 +26,6 @@
 			</intent-filter>
 		</activity>
 		
-		<activity
-				android:name=".views.PostDetailsActivity"
-				android:label="@string/title_activity_details" />
+		<activity android:name=".views.PostDetailsActivity" />
 	</application>
 </manifest>

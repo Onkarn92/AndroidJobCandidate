@@ -10,6 +10,7 @@ import app.storytel.candidate.com.adapters.PostAdapter
 import app.storytel.candidate.com.databinding.ActivityPostBinding
 import app.storytel.candidate.com.di.DaggerPostComponent
 import app.storytel.candidate.com.models.Post
+import app.storytel.candidate.com.utilities.Utils
 import app.storytel.candidate.com.views.models.PostViewModel
 import javax.inject.Inject
 
@@ -36,7 +37,7 @@ class PostActivity : AppCompatActivity(), PostAdapter.Callback {
 	
 	private fun setupView() {
 		supportActionBar?.setDisplayShowTitleEnabled(true)
-		supportActionBar?.setTitle(R.string.app_name)
+		supportActionBar?.title = Utils.getString(R.string.app_name)
 		with(binding) {
 			postRecycler.addItemDecoration(DividerItemDecoration(this@PostActivity, DividerItemDecoration.VERTICAL))
 			postRecycler.layoutManager = LinearLayoutManager(this@PostActivity)
