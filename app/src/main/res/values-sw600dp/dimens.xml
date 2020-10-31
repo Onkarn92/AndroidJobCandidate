@@ -4,4 +4,5 @@
 	<dimen name="error_placeholder_width">200dp</dimen>
 	<dimen name="error_placeholder_height">125dp</dimen>
 	<dimen name="detail_backdrop_height">300dp</dimen>
+	<dimen name="post_image_size">75dp</dimen>
 </resources>

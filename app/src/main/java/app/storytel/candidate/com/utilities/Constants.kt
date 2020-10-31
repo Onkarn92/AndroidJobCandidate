@@ -12,3 +12,4 @@ const val DEFAULT_DOUBLE = 0.0
 const val DEFAULT_LONG = -1L
 const val SUCCESS = "success"
 const val FAILURE = "failure"
+const val INTENT_KEY_POST = "key_selected_post"
