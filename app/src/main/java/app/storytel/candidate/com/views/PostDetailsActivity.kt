@@ -75,7 +75,7 @@ class PostDetailsActivity : AppCompatActivity() {
 		supportActionBar?.setDisplayShowTitleEnabled(true)
 		supportActionBar?.title = Utils.getString(R.string.title_activity_details).format(post?.id ?: DEFAULT_INT)
 		
-		Glide.with(this).load("${post?.url}.png").centerCrop().placeholder(R.drawable.placeholder_image).error(R.drawable.placeholder_image)
+		Glide.with(this).load(post?.url).centerCrop().placeholder(R.drawable.placeholder_image).error(R.drawable.placeholder_image)
 				.into(binding.postImage)
 		
 		with(binding) {

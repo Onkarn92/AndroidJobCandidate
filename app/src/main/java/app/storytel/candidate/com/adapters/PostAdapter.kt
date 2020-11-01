@@ -59,7 +59,7 @@ class PostAdapter(private val callback: Callback) : RecyclerView.Adapter<ViewHol
 		 */
 		fun setData(post: Post) {
 			this.post = post
-			Glide.with(itemView).load("${post.thumbnailUrl}.png").placeholder(R.drawable.placeholder_image).error(R.drawable.placeholder_image)
+			Glide.with(itemView).load(post.thumbnailUrl).centerCrop().placeholder(R.drawable.placeholder_image).error(R.drawable.placeholder_image)
 					.into(binding.postImage)
 			binding.titleText.text = post.title
 			binding.bodyText.text = post.body
