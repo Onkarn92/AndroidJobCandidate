@@ -20,6 +20,9 @@ import app.storytel.candidate.com.views.models.PostDetailsViewModel
 import com.bumptech.glide.Glide
 import javax.inject.Inject
 
+/**
+ * Post details view container.
+ */
 class PostDetailsActivity : AppCompatActivity() {
 	
 	private lateinit var binding: ActivityPostDetailsBinding
@@ -70,6 +73,9 @@ class PostDetailsActivity : AppCompatActivity() {
 		return super.onOptionsItemSelected(item)
 	}
 	
+	/**
+	 * Setup a view for [PostDetailsActivity] container.
+	 */
 	private fun setupView() {
 		supportActionBar?.setDisplayHomeAsUpEnabled(true)
 		supportActionBar?.setDisplayShowTitleEnabled(true)
@@ -88,6 +94,9 @@ class PostDetailsActivity : AppCompatActivity() {
 		viewModel.fetchComments(post!!.id)
 	}
 	
+	/**
+	 * Observe all existing and new comments and load it into adapter, as well as observer corresponding errors.
+	 */
 	private fun attachObserver() {
 		viewModel.getCommentObservable().observe(this) {(comments, cause, message) ->
 			when {

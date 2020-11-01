@@ -14,6 +14,9 @@ import app.storytel.candidate.com.utilities.Utils
 import app.storytel.candidate.com.views.models.PostViewModel
 import javax.inject.Inject
 
+/**
+ * Post list view container.
+ */
 class PostActivity : AppCompatActivity(), PostAdapter.Callback {
 	
 	private lateinit var binding: ActivityPostBinding
@@ -35,6 +38,9 @@ class PostActivity : AppCompatActivity(), PostAdapter.Callback {
 		startActivity(PostDetailsActivity.newInstance(this, post))
 	}
 	
+	/**
+	 * Setup a view for [PostActivity] container.
+	 */
 	private fun setupView() {
 		supportActionBar?.setDisplayShowTitleEnabled(true)
 		supportActionBar?.title = Utils.getString(R.string.app_name)
@@ -46,6 +52,9 @@ class PostActivity : AppCompatActivity(), PostAdapter.Callback {
 		}
 	}
 	
+	/**
+	 * Observe all existing and new posts and load it into adapter, as well as observer corresponding errors.
+	 */
 	private fun attachedObserver() {
 		viewModel.getPostObservable().observe(this) {(posts, cause, message) ->
 			when {
@@ -72,6 +81,9 @@ class PostActivity : AppCompatActivity(), PostAdapter.Callback {
 		}
 	}
 	
+	/**
+	 * Dispatch all post request.
+	 */
 	private fun loadPosts() {
 		with(binding) {
 			postRecycler.visibility = View.GONE

@@ -10,6 +10,11 @@ import app.storytel.candidate.com.databinding.PostItemBinding
 import app.storytel.candidate.com.models.Post
 import com.bumptech.glide.Glide
 
+/**
+ * Responsible to handle post list.
+ *
+ * @param callback to be registered by caller view.
+ */
 class PostAdapter(private val callback: Callback) : RecyclerView.Adapter<ViewHolder>() {
 	
 	private val posts: ArrayList<Post> = arrayListOf()

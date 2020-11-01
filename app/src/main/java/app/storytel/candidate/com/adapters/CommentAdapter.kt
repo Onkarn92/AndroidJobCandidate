@@ -9,6 +9,9 @@ import app.storytel.candidate.com.adapters.CommentAdapter.ViewHolder
 import app.storytel.candidate.com.databinding.ItemCommentBinding
 import app.storytel.candidate.com.models.Comment
 
+/**
+ * Responsible to handle comment list.
+ */
 class CommentAdapter : RecyclerView.Adapter<ViewHolder>() {
 	
 	private val comments: ArrayList<Comment> = arrayListOf()

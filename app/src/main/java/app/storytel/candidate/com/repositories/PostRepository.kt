@@ -18,6 +18,9 @@ class PostRepository {
 	
 	private val apiService: APIService by lazy {NetworkUtils.retrofit.create(APIService::class.java)}
 	
+	/**
+	 * Trigger a request to fetch all posts from server.
+	 */
 	fun fetchPosts(eventTracker: HttpEventTracker<List<Post>>) {
 		val httpOperationWrapper = HttpOperationWrapper<List<Post>>()
 		httpOperationWrapper.initCall(apiService.getPosts(), object : HttpOperationCallback<List<Post>> {
@@ -39,6 +42,11 @@ class PostRepository {
 		})
 	}
 	
+	/**
+	 * Trigger a request to fetch selected post's comments from server.
+	 *
+	 * @param postId of selected post.
+	 */
 	fun fetchComments(
 			postId: Int,
 			eventTracker: HttpEventTracker<List<Comment>>
@@ -63,6 +71,9 @@ class PostRepository {
 		})
 	}
 	
+	/**
+	 * Trigger a request to fetch all photos from server. Also, Responsible for patching random image URLs to all posts.
+	 */
 	private fun fetchPhotos(
 			posts: List<Post>,
 			eventTracker: HttpEventTracker<List<Post>>
@@ -79,6 +90,7 @@ class PostRepository {
 					!result.isNullOrEmpty() -> {
 						val iterator = posts.listIterator()
 						while (iterator.hasNext()) {
+							// For each post patch random photo URLs
 							val post = iterator.next()
 							val photo = result.random()
 							post.url = photo.url
@@ -87,6 +99,7 @@ class PostRepository {
 						eventTracker.onCallSuccess(posts)
 					}
 					else -> {
+						// In case of photo API failure, show post list with placeholder images.
 						eventTracker.onCallSuccess(posts)
 					}
 				}

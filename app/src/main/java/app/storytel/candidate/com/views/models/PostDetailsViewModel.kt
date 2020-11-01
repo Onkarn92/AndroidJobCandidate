@@ -6,8 +6,15 @@ import app.storytel.candidate.com.App
 import app.storytel.candidate.com.interfaces.HttpEventTracker
 import app.storytel.candidate.com.models.Comment
 import app.storytel.candidate.com.repositories.PostRepository
+import app.storytel.candidate.com.views.PostDetailsActivity
 import okhttp3.ResponseBody
 
+/**
+ * View model representation for [PostDetailsActivity]
+ *
+ * @param app to be used by [AndroidViewModel]
+ * @param repository to be used internally to fetch records.
+ */
 class PostDetailsViewModel(
 		val app: App,
 		private val repository: PostRepository
@@ -33,7 +40,15 @@ class PostDetailsViewModel(
 		commentObservable.postValue(Triple(arrayListOf(), cause, throwable.localizedMessage))
 	}
 	
+	/**
+	 * Returns the observable for observing comment list.
+	 */
 	fun getCommentObservable() = commentObservable
 	
+	/**
+	 * Get top 3 comments for selected post.
+	 *
+	 * @param postId of the selected post.
+	 */
 	fun fetchComments(postId: Int) = repository.fetchComments(postId, this)
 }
